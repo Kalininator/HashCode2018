@@ -53,7 +53,7 @@ class Map:
 		totalDist = distToRide + ride.distance
 		doBeforeEnd = totalDist <= self.steps
 		beforeFinishTime = ride.latestfinish >= self.currentStep + totalDist
-		return doBeforeEnd
+		return doBeforeEnd and beforeFinishTime
 
 	def nearestRideToVehicle(self, vehicle):
 		best_ride = None

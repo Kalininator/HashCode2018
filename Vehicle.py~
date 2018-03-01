@@ -1,0 +1,15 @@
+class Vehicle:
+	def __init__(self):
+		self.currentPosition = (0, 0)
+		self.currentRide = None
+		self.history = []
+
+	def isFree(self):
+		return self.currentRide is None
+
+	def addRide(self,RideId):
+		self.currentRide = RideId
+		self.history.append(RideID)
+
+	def RideComplete(self):
+		self.currentRide = None
