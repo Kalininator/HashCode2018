@@ -46,3 +46,10 @@ class Map:
 						best_car = car
 						best_distance = new_dist
 		return best_car
+
+	def numFreeVehicles(self):
+		free = 0
+		for v in self.vehicles:
+			if v.isFree():
+				free += 1
+		return free
