@@ -27,5 +27,5 @@ def main(filename, output):
 if __name__ == "__main__":
 	files = ['a_example.in','b_should_be_easy.in','c_no_hurry.in','d_metropolis.in','e_high_bopnus.in']
 	# main('b_should_be_easy.in')
-	for i in range(files):
+	for i in range(len(files)):
 		main(files[i],str(1) + ".txt")
