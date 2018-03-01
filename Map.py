@@ -8,11 +8,15 @@ def distance((startx, starty), (finishx, finishy)):
 
 
 class Map:
-	def __init__(self, rows, columns, rides, vehicles):
+	def __init__(self, rows, columns, rides, vehicles, steps, bonus):
 		self.rows = rows
 		self.columns = columns
 		self.rides = rides
 		self.vehicles = vehicles
+		#number of remaining steps
+		self.steps = steps
+		#bonus points for startign a ride on time
+		self.bonus = bonus
 
 	def nearestVehicleTo(self, location):
 		best_car = None

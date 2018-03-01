@@ -31,5 +31,5 @@ def createMapFromFile(filename):
 	for _ in range(vehicles):
 		vehiclelist.append(Vehicle())
 
-	map = Map(row,col,rides,vehiclelist)
+	map = Map(row,col,rides,vehiclelist,steps,bonus)
 	return map

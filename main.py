@@ -3,7 +3,7 @@ import input
 
 def main():
 	map = input.createMapFromFile('a_example.in')
-	print map.columns
+	print map.steps
 
 if __name__ == "__main__":
     main()
