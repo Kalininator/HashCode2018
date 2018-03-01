@@ -1,5 +1,7 @@
 import numpy as np
 from Ride import Ride
+from Map import Map
+from Vehicle import Vehicle
 
 mydata = np.genfromtxt('b_should_be_easy.in', delimiter=" ",dtype=int)
 criticaldata = mydata[0]
@@ -22,3 +24,9 @@ for i in range(0,mydata.shape[0]):
 #print(len(rides))
 test = rides[0]
 test.display()
+
+vehicles = []
+for _ in range(vehicles):
+	vehicles.append(Vehicle())
+
+map = Map(row,col,rides,vehicles)
