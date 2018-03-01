@@ -53,3 +53,10 @@ class Map:
 			if v.isFree():
 				free += 1
 		return free
+
+	def freeVehicles(self):
+		free = []
+		for v in self.vehicles:
+			if v.isFree():
+				free.append(v)
+		return free
