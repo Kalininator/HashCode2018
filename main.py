@@ -19,7 +19,9 @@ def main(filename, output):
 		for v in map.vehicles:
 			v.update()
 		map.removeFinishedRides()
+		map.removeUnluckyPeople()
 		map.currentStep += 1
+		map.steps -= 1
 
 	print map.vehicles[0].history
 	o = Output(map.vehicles)

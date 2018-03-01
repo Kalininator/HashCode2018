@@ -86,3 +86,6 @@ class Map:
 
 	def removeFinishedRides(self):
 		self.rides = [i for i in self.rides if i.done == False]
+
+	def removeUnluckyPeople(self):
+		self.rides = [i for i in self.rides if i.distance <= self.steps]
