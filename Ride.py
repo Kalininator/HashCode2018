@@ -7,6 +7,7 @@ class Ride:
 		self.latestfinish = latestfinish
 		self.distance = distance(start,finish)
 		self.id = ID
+		self.done = False
 		self.isAssigned = False
 
 	def display(self):

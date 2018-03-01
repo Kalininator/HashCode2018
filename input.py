@@ -24,8 +24,6 @@ def createMapFromFile(filename):
 		test = Ride(i,(mydata[i][0],mydata[i][1]),(mydata[i][2],mydata[i][3]),mydata[i][4],mydata[i][5])
 		rides.append(test)
 	#print(len(rides))
-	test = rides[0]
-	test.display()
 
 	vehiclelist = []
 	for _ in range(vehicles):
