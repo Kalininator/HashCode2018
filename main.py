@@ -19,6 +19,7 @@ def main(filename, output):
 		for v in map.vehicles:
 			v.update()
 		map.removeFinishedRides()
+		map.currentStep += 1
 
 	print map.vehicles[0].history
 	o = Output(map.vehicles)
@@ -28,7 +29,7 @@ def main(filename, output):
 
 
 if __name__ == "__main__":
-	files = ['a_example.in','b_should_be_easy.in','c_no_hurry.in','d_metropolis.in','e_high_bopnus.in']
-	main('b_should_be_easy.in','test.txt')
+	files = ['a_example.in','b_should_be_easy.in','c_no_hurry.in','d_metropolis.in','e_high_bonus.in']
+	main(files[3],'test.txt')
 	# for i in range(len(files)):
 	# 	main(files[i],str(i) + ".txt")

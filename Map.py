@@ -15,6 +15,7 @@ class Map:
 		self.vehicles = vehicles
 		# number of remaining steps
 		self.steps = steps
+		self.currentStep = 0
 		# bonus points for startign a ride on time
 		self.bonus = bonus
 
@@ -50,7 +51,9 @@ class Map:
 	def isRideViable(self, ride, vehicle):
 		distToRide = distance(ride.start, vehicle.currentPosition)
 		totalDist = distToRide + ride.distance
-		return totalDist <= self.steps
+		doBeforeEnd = totalDist <= self.steps
+		beforeFinishTime = ride.latestfinish >= self.currentStep + totalDist
+		return doBeforeEnd and beforeFinishTime
 
 	def nearestRideToVehicle(self, vehicle):
 		best_ride = None
