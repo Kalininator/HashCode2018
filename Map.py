@@ -14,7 +14,7 @@ class Map:
 		self.rides = rides
 		self.vehicles = vehicles
 
-	def nearestCarTo(self, location):
+	def nearestVehicleTo(self, location):
 		best_car = None
 		best_distance = None
 		for car in self.vehicles:
@@ -26,4 +26,19 @@ class Map:
 				if new_dist < best_distance:
 					best_car = car
 					best_distance = new_dist
+		return best_car
+
+	def nearestFreeVehicleTo(self, location):
+		best_car = None
+		best_distance = None
+		for car in self.vehicles:
+			if car.isFree():
+				if best_car is None:
+					best_car = car
+					best_distance = distance(location, car.currentLocation)
+				else:
+					new_dist = distance(location,car.currentLocation)
+					if new_dist < best_distance:
+						best_car = car
+						best_distance = new_dist
 		return best_car
