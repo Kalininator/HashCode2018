@@ -80,3 +80,6 @@ class Map:
 			if v.isFree():
 				free.append(v)
 		return free
+
+	def removeFinishedRides(self):
+		self.rides = [i for i in self.rides if i.done == False]
